@@ -1,0 +1,88 @@
+body {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    /*font-size: 16px; */
+    line-height: 1.7;
+    color: $color-gray-dark;
+}
+
+
+.heading-primary {
+    color:$color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden; /* fix the animation shaking */
+    margin-bottom: 6rem;
+    position: relative;;
+    display: inline-block;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+        @include responsive(phone){
+        letter-spacing: 1rem;
+        font-size: 5rem;
+        }
+    
+    }
+    
+    &--sub {
+        display:block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.5rem;
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+        @include responsive(phone){
+            letter-spacing: .5rem;
+        }
+    }
+}
+
+.heading-xl {
+    font-size: 5rem;
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: monospace;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    @include responsive(tab-portrait){
+        font-size: 3rem;
+    }
+
+    @include responsive(phone){
+        font-size: 2.5rem;
+    }
+};
+
+.heading-tertionary {
+    font-size: 1.6rem;
+    font-weight:700;
+    text-transform: uppercase;
+    color: $color-primary-dark;
+}
+
+.paragraph {
+    font-size: 1.5rem;
+    color: $color-primary-light;
+
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}

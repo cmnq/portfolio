@@ -1,0 +1,28 @@
+.navigation {
+    width: 100%;
+    font-size: 1.6rem;
+
+
+&__list{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    position: relative;
+    
+}
+
+&__item {
+    margin-right: 2rem;
+    padding: 0.9rem;
+}
+&__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-white;
+}
+
+&__logotype {
+    margin-right: auto;
+    margin-left: 0.9rem;
+}
+}

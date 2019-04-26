@@ -1,0 +1,39 @@
+
+ .section__about {
+    background-color: $color-gray-light-1;
+    padding: 25rem 0;
+    margin-top: -20vh;
+    display: flex;
+    
+
+    &-text-box {
+        width: 50%;
+        margin-right: 10rem;
+
+    }
+    &-photo {
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+
+ }
+
+ .photoxd {
+     width: 50%;
+     outline: .5rem solid white;
+     position: relative;
+     padding: 3rem;
+
+     &::after {
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        bottom: -3px;
+        right: -3px;
+        border: .5rem pink solid;
+ }}
+ 

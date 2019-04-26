@@ -1,0 +1,162 @@
+.section__skills{
+    height: 120rem;
+background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark);
+background-size: cover;
+background-position: top;
+position: relative;
+margin-top: -25rem;
+//-webkit-clip-path: polygon(0 0  , 100% 0, 100% 100%, 0 75vh);
+clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+}
+// //
+// .card__icon {
+//     width: 100%;
+// }
+// .card-box {
+//     display: flex;
+//     width: 100%;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+//     align-content: flex-start;
+// }
+
+// .card {
+//     margin-top: 30rem;
+//     background-color: white;
+//     height: 300rem;
+//     padding: 5rem;
+//     display: flex;
+//     flex-direction: column;
+//     width: 33%;
+//     justify-content: center;
+//     align-content: center;
+
+//     text-align: center;
+//     color: $color-white;
+//     border: 1px solid white;
+//     height: 2rem;
+
+//     &__imgbox img{
+//         width: 50%;
+//     }
+// }
+
+
+.section__myskills {
+    padding: 10rem 0;
+    background-color: #fff;
+    height: 240rem;
+    background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    margin-top: -30rem;
+    //-webkit-clip-path: polygon(0 0  , 100% 0, 100% 100%, 0 75vh);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.cardcontainer {
+    display: flex;
+    flex-wrap:wrap;
+    margin: 10rem;
+    justify-content: space-around;
+}
+
+.heading-special {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 0.3rem;
+    margin-right: -.5rem;
+    margin-bottom: 5rem;
+    margin-top: 15rem;
+    text-align: center;
+    color:white;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 10rem;
+        height: .8rem;
+        background-color: white;
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2rem;
+    }
+}
+
+
+.card {
+    width: 32rem;
+    background-color: #ebeef8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
+    transition: .5s all;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.4);
+    }
+
+.card-img {
+    width: 100%;
+    object-fit: cover;
+    height: 26rem;
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+
+}
+
+.profile-img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -10rem;
+    z-index: 999;
+
+}}
+
+.card-heading {
+    font-size: 2.5rem;
+    color: $color-primary-dark;
+    margin: 1.5rem 0;
+}
+
+.job-title {
+    color: $color-primary-light;
+    font-size: 1.25rem; 
+    margin-top: -2rem;
+}
+
+.about {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    text-align: center;
+    font-style: italic;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 20rem;
+        height: .1rem;
+        background-color: $color-gray-light-1;
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2rem;
+    }
+}
+
