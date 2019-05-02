@@ -1,0 +1,64 @@
+.section__goals {
+    background-color: $color-gray-light-1;
+    padding: 25rem 0;
+    margin-top: -25rem;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.goal-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+    background-color: rgba($color-gray-light-2, .5);
+    
+    &__imgbox--left {
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        width: 60%;
+        margin-right: 10rem;
+        outline: 5px solid red;
+    }
+
+    &__imgbox--right {
+        clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+        width: 60%;
+        margin-left: 10rem;
+    }
+
+    &__img {
+        width: 100%;
+        outline: 5px solid$color-primary;
+
+    }
+
+    &__textbox--left {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-right: 10rem;
+        justify-content: center;
+    }
+
+    &__textbox--right {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 10rem;
+        justify-content: center;
+    }
+}
+
+
+    .icon-container {
+    background-color:rgba($color-white, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid $color-gray-light-2;
+    box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.17);
+    height: 20rem;
+    &__icon {
+        fill: $color-primary;
+        width: 10rem;
+        height: 10rem;
+    }
+}
