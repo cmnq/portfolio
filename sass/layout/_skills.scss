@@ -1,54 +1,8 @@
-.section__skills{
-    height: 120rem;
-background-image: linear-gradient(
-    to right bottom,
-    $color-primary-light,
-    $color-primary-dark);
-background-size: cover;
-background-position: top;
-position: relative;
-margin-top: -25rem;
-//-webkit-clip-path: polygon(0 0  , 100% 0, 100% 100%, 0 75vh);
-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
-}
-// //
-// .card__icon {
-//     width: 100%;
-// }
-// .card-box {
-//     display: flex;
-//     width: 100%;
-//     justify-content: space-between;
-//     flex-wrap: wrap;
-//     align-content: flex-start;
-// }
-
-// .card {
-//     margin-top: 30rem;
-//     background-color: white;
-//     height: 300rem;
-//     padding: 5rem;
-//     display: flex;
-//     flex-direction: column;
-//     width: 33%;
-//     justify-content: center;
-//     align-content: center;
-
-//     text-align: center;
-//     color: $color-white;
-//     border: 1px solid white;
-//     height: 2rem;
-
-//     &__imgbox img{
-//         width: 50%;
-//     }
-// }
 
 
 .section__myskills {
     padding: 10rem 0;
     background-color: #fff;
-    height: 260rem;
     background-image: linear-gradient(
         to right bottom,
         $color-primary-light,
@@ -59,6 +13,10 @@ clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
     margin-top: -30rem;
     //-webkit-clip-path: polygon(0 0  , 100% 0, 100% 100%, 0 75vh);
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+
+    @include responsive(phone){ //width <700
+        clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+    }
 }
 
 .cardcontainer {
@@ -78,7 +36,9 @@ clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
     text-align: center;
     color:white;
     position: relative;
-
+    @include responsive(phone){ //width <700
+        margin-top: 2rem;
+    }
     &::after {
         content: "";
         width: 10rem;

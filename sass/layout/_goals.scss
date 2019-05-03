@@ -3,6 +3,12 @@
     padding: 25rem 0;
     margin-top: -25rem;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+
+    @include responsive(phone){ //width <700
+        clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+        margin-top: -10rem;
+        padding: 15rem 0;
+    }
 }
 
 .goal-container {
@@ -10,18 +16,33 @@
     justify-content: space-between;
     margin-bottom: 10rem;
     background-color: rgba($color-gray-light-2, .5);
+
+    @include responsive(phone){ //width <700
+        flex-direction: column;
+    }
     
     &__imgbox--left {
         clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
         width: 60%;
         margin-right: 10rem;
         outline: 5px solid red;
+        @include responsive(phone){ //width <700
+            margin-bottom: 2rem;
+            width: 100%;
+            clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+        }
     }
 
     &__imgbox--right {
         clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
         width: 60%;
         margin-left: 10rem;
+        @include responsive(phone){ //width <700
+            margin-bottom: 2rem;
+            margin-left: 0;
+            width: 100%;
+            clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+        }
     }
 
     &__img {
@@ -36,6 +57,10 @@
         text-align: center;
         margin-right: 10rem;
         justify-content: center;
+
+        @include responsive(phone){ //width <700
+            margin-right: 0;
+        }
     }
 
     &__textbox--right {
@@ -44,6 +69,9 @@
         text-align: center;
         margin-left: 10rem;
         justify-content: center;
+        @include responsive(phone){ //width <700
+            margin-left: 0;
+        }
     }
 }
 
@@ -56,6 +84,9 @@
     border-top: 1px solid $color-gray-light-2;
     box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.17);
     height: 20rem;
+
+
+
     &__icon {
         fill: $color-primary;
         width: 10rem;

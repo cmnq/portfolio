@@ -4,11 +4,19 @@
     padding: 25rem 0;
     margin-top: -20vh;
     display: flex;
+    @include responsive(phone){ //width <700
+        flex-direction: column;
+    }
     
 
     &-text-box {
         width: 50%;
         margin-right: 10rem;
+        @include responsive(phone){ //width <700
+            width: 100%;
+            padding: 2rem;
+        }
+        
 
     }
     &-photo {
@@ -16,6 +24,11 @@
         align-items: center;
         justify-content: center;
         display: flex;
+
+        @include responsive(phone){ //width <700
+            width:100%;
+          
+        }
     }
 
 
@@ -27,13 +40,10 @@
      position: relative;
      padding: 3rem;
 
-     &::after {
-        content: "";
-        position: absolute;
-        top: -3px;
-        left: -3px;
-        bottom: -3px;
-        right: -3px;
-        border: .5rem pink solid;
- }}
+     @include responsive(phone){ //width <700
+        padding: 0;
+        margin-bottom: .5rem;
+    }
+
+     }
  

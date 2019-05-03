@@ -1,68 +1,99 @@
-.section__projects{
-background-image: linear-gradient(
-    to right bottom,
-    $color-primary-light,
-    $color-primary-dark);
-background-size: cover;
-background-position: top;
-position: relative;
-margin-top: -39rem;
-//-webkit-clip-path: polygon(0 0  , 100% 0, 100% 100%, 0 75vh);
-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+.section-projects {
+    background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    margin-top: -20rem;
+-webkit-clip-path: polygon(0 0  , 100% 0, 100% 100%, 0 75vh);
+clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+
+@include responsive(phone){ //width <700
+    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
+    margin-top: -10rem;
+    padding: 5rem;
 }
 
-.projects__wrapper {
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-around;
-    margin-top: 25rem;
-    
-}
-.projects__container {
-    width: 60%;
+    &__wrapper {
+        margin-top: 10rem;
+    }
+    &__container {
+        margin-top: 5rem;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        border-top: $color-primary-dark 1px solid;
+        border-bottom: $color-primary-dark 1px solid;
+        background-color: rgba($color-primary-light, .4);
 
-    height: 60vh;
-    margin-top: 1rem;
-    box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.67);
+        @include responsive(phone){ //width <700
+           flex-direction: column;
+        }
     
-    &-content{
+
+        
+    }
+
+    &__imgbox {
+        display: flex;
+        width: 50%;
+
+        @include responsive(phone){ //width <700
+            width: 100%;
+         }
+        &-img {
+            width: 100%;
+            @include responsive(phone){ //width <700
+                height: 50vh;
+             }
+        }
+    }
+
+    &__textbox {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items:center;
-        text-align: center;
-        height: inherit;
-        width: 100%;
-       
+        align-items: center;
+        width: 50%;
+        padding: 1.5rem;
 
+        @include responsive(phone){ //width <700
+            width: 100%;
 
+         }
+        &-heading {
+            font-size: 3rem;
+            color: $color-white;
+            letter-spacing: 1.1rem;
+            position: relative;
+            margin-bottom: 3.5rem;
+            
+            &::after{
+                content: "";
+                width: 25rem;
+                height: .09rem;
+                background-color: $color-gray-light-1;
+                position: absolute;
+                bottom: -1rem;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 2rem;
+            }
+        }
+
+        &-paragraph {
+            font-size: 1.6rem;
+            color: white;
+        }
+
+        &-iconbox{
+            display: flex;
+            margin: 5rem;
+            justify-content: space-around;
+        }
     }
-}
-
-.contentbox{
-    
-    
-    
-    &--1 {
- //   background-image: url(../../img/series-board.png);
-    background-size: cover;
-    background-position: center;
-
-    &--2{
-
-    }
-}
-}
-.contentbox__img {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    backface-visibility: hidden;
-    overflow: hidden;
-    transition: all .3s;
-    filter:brightness(20%);
 
 }
-.textboxx {
-    position: absolute;
-}
+

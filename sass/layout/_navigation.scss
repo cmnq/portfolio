@@ -2,7 +2,6 @@
     width: 100%;
     font-size: 1.6rem;
 
-
 &__list{
     display: flex;
     justify-content: flex-end;
@@ -19,10 +18,20 @@
     text-decoration: none;
     text-transform: uppercase;
     color: $color-white;
+    @include responsive(phone){ //width <700
+        display: none;
+    }
 }
 
 &__logotype {
     margin-right: auto;
     margin-left: 0.9rem;
+    @include responsive(phone){ //width <700
+        position: absolute;
+        margin-top: 10rem;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 }

@@ -11,7 +11,9 @@
     position: relative;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
-
+    @include responsive(phone){ //width <700
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
+    }
 
     &__text-box {
         display: flex;
@@ -21,6 +23,10 @@
         justify-content: center;
         text-align: center;
         align-items: center;
+
+        @include responsive(phone){ //width <700
+            height: 70vh;
+        }
     }
 
 }
