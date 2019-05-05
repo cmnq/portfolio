@@ -6,9 +6,9 @@
     background-size: cover;
     background-position: top;
     position: relative;
-    margin-top: -20rem;
+    margin-top: -30rem;
 -webkit-clip-path: polygon(0 0  , 100% 0, 100% 100%, 0 75vh);
-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
 
 @include responsive(phone){ //width <700
     clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
@@ -18,15 +18,20 @@ clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
 
     &__wrapper {
         margin-top: 10rem;
+        display: flex;
+        flex-direciton: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
     }
     &__container {
         margin-top: 5rem;
         display: flex;
-        width: 100%;
+        flex-direction: column;
+        width: 30%;
         justify-content: space-around;
-        border-top: $color-primary-dark 1px solid;
-        border-bottom: $color-primary-dark 1px solid;
-        background-color: rgba($color-primary-light, .4);
+        background-color: #ebeef8;
+        box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
 
         @include responsive(phone){ //width <700
            flex-direction: column;
@@ -38,13 +43,14 @@ clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
 
     &__imgbox {
         display: flex;
-        width: 50%;
+        width: 100%;
 
         @include responsive(phone){ //width <700
             width: 100%;
          }
         &-img {
             width: 100%;
+            height: 50vh;
             @include responsive(phone){ //width <700
                 height: 50vh;
              }
@@ -56,7 +62,9 @@ clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 50%;
+        width: 100%;
+        height: 35rem;
+       
         padding: 1.5rem;
 
         @include responsive(phone){ //width <700
@@ -65,7 +73,7 @@ clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
          }
         &-heading {
             font-size: 3rem;
-            color: $color-white;
+            color: $color-primary-dark;
             letter-spacing: 1.1rem;
             position: relative;
             margin-bottom: 3.5rem;
@@ -74,7 +82,7 @@ clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
                 content: "";
                 width: 25rem;
                 height: .09rem;
-                background-color: $color-gray-light-1;
+                background-color: $color-primary-dark;
                 position: absolute;
                 bottom: -1rem;
                 left: 50%;
@@ -85,13 +93,27 @@ clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
 
         &-paragraph {
             font-size: 1.6rem;
-            color: white;
+            color:$color-primary-dark;
         }
 
         &-iconbox{
             display: flex;
             margin: 5rem;
+            width: inherit;
             justify-content: space-around;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 20rem;
+                height: .1rem;
+                background-color: $color-gray-light-1;
+                bottom: -2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 2rem;
+            }
         }
     }
 
