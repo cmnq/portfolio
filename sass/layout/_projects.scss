@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: top;
     position: relative;
+    height: fit-content;
     margin-top: -30rem;
 -webkit-clip-path: polygon(0 0  , 100% 0, 100% 100%, 0 75vh);
 clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
@@ -23,6 +24,7 @@ clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-start;
+        margin-bottom: 20rem;
     }
     &__container {
         margin-top: 5rem;

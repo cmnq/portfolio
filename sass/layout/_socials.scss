@@ -1,0 +1,52 @@
+.section-socials{
+
+    background-color: $color-gray-light-1;
+    padding: 10rem 0;
+    margin-top: -10rem;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+
+    @include responsive(phone){ //width <700
+        clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+        margin-top: -10rem;
+        padding: 15rem 0;
+    }
+    &__container {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-around;
+        padding: 3rem;
+    }
+
+    &__imgbox{
+        width: 50%;
+
+    }
+    &__img {
+        width: 100%;
+    }
+
+    &__text-container{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    &__textbox {
+        padding: 3rem;
+        font-size: 1.6rem;
+    }
+
+    &__paragraph {
+
+    }
+
+    &__iconbox {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__icon {
+        width: 15%;
+    }
+}

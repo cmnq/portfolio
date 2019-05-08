@@ -15,10 +15,6 @@ body {
     position: relative;
     display: inline-block;
 
-    @include responsive(phone){ //width <700
-        margin-bottom: 2rem;
-    }
-
     &--main {
         display: block;
         font-size: 6rem;
@@ -107,4 +103,43 @@ body {
         color: $color-white;
         font-size: 1.6rem;
     }
+}
+
+
+.heading-special {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 0.3rem;
+    margin-right: -.5rem;
+    margin-bottom: 5rem;
+    margin-top: 15rem;
+    text-align: center;
+    color:white;
+    position: relative;
+    @include responsive(phone){ //width <700
+        margin-top: 2rem;
+    }
+    &::after {
+        content: "";
+        width: 10rem;
+        height: .8rem;
+        background-color: white;
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2rem;
+    }
+};
+
+.bold {
+    &-navy {
+    color: $color-primary;
+    font-weight: bold;
+    
+}
+    &-white{ 
+    font-weight: bold;
+    color: $color-white;
+}
 }
