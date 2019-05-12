@@ -11,11 +11,19 @@
 -webkit-clip-path: polygon(0 0  , 100% 0, 100% 100%, 0 75vh);
 clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
 
+
+@include responsive(tab-portrait){ //width <700
+    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
+    margin-top: -20rem;
+    padding: 10rem;
+}
 @include responsive(phone){ //width <700
     clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
     margin-top: -10rem;
-    padding: 5rem;
+    padding: 2rem;
 }
+
+
 
     &__wrapper {
         margin-top: 10rem;
@@ -25,6 +33,11 @@ clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
         justify-content: space-around;
         align-items: flex-start;
         margin-bottom: 20rem;
+
+        @include responsive(phone){ //width <700
+            flex-direction: column;
+        }
+        
     }
     &__container {
         margin-top: 5rem;
@@ -35,10 +48,16 @@ clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
         background-color: #ebeef8;
         box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
 
+        @include responsive(tab-portrait){ //width <700
+            width: 100%;
+            margin-bottom: 3rem;
+         }
         @include responsive(phone){ //width <700
            flex-direction: column;
+           width: 100%;
         }
-    
+
+
 
         
     }
@@ -53,9 +72,15 @@ clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
         &-img {
             width: 100%;
             height: 50vh;
-            @include responsive(phone){ //width <700
-                height: 50vh;
+
+            @include responsive(tab-portrait){ //width <700
+                height: 40rem;
              }
+            @include responsive(phone){ //width <700
+                height: 40vh;
+             }
+
+ 
         }
     }
 
@@ -73,6 +98,7 @@ clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
             width: 100%;
 
          }
+         
         &-heading {
             font-size: 3rem;
             color: $color-primary-dark;
@@ -96,6 +122,10 @@ clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
         &-paragraph {
             font-size: 1.6rem;
             color:$color-primary-dark;
+
+            @include responsive(tab-portrait){ //width <700
+                font-size: 2rem;
+             }
         }
 
         &-iconbox{

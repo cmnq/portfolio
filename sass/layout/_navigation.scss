@@ -1,6 +1,9 @@
 .navigation {
     width: 100%;
     font-size: 1.6rem;
+    @include responsive(phone){ //width <700
+        font-size: 1.3rem;
+    }
 
 &__list{
     display: flex;
@@ -26,6 +29,10 @@
 &__logotype {
     margin-right: auto;
     margin-left: 0.9rem;
+
+    @include responsive(tab-portrait){ //width <700
+        font-size: 1.7rem;
+    }
     @include responsive(phone){ //width <700
         position: absolute;
         margin-top: 10rem;
@@ -33,5 +40,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+ 
 }
 }

@@ -9,6 +9,12 @@
         margin-top: -10rem;
         padding: 15rem 0;
     }
+    @include responsive(tab-portrait){ //width <700
+        clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+        margin-top: -10rem;
+        padding: 5rem 0;
+    }
+    
 }
 
 .goal-container {
@@ -19,6 +25,8 @@
 
     @include responsive(phone){ //width <700
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     
     &__imgbox--left {
@@ -26,11 +34,18 @@
         width: 60%;
         margin-right: 10rem;
         outline: 5px solid red;
+
+        @include responsive(tab-portrait){ //width <700
+            width: 100%;
+            margin-right: 0;
+        }
         @include responsive(phone){ //width <700
             margin-bottom: 2rem;
-            width: 100%;
+            width: 70%;
             clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
         }
+
+
     }
 
     &__imgbox--right {
@@ -43,11 +58,16 @@
             width: 100%;
             clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
         }
+
+        @include responsive(tab-portrait){ //width <700
+            width: 100%;
+            margin-left: 0;
+        }
     }
 
     &__img {
         width: 100%;
-        outline: 5px solid$color-primary;
+        outline: 5px solid $color-primary;
 
     }
 
@@ -61,6 +81,10 @@
         @include responsive(phone){ //width <700
             margin-right: 0;
         }
+
+        @include responsive(tab-portrait){ //width <700
+            margin-right: 0;
+        }
     }
 
     &__textbox--right {
@@ -70,6 +94,10 @@
         margin-left: 10rem;
         justify-content: center;
         @include responsive(phone){ //width <700
+            margin-left: 0;
+        }
+
+        @include responsive(tab-portrait){ //width <700
             margin-left: 0;
         }
     }
@@ -84,6 +112,10 @@
     border-top: 1px solid $color-gray-light-2;
     box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.17);
     height: 20rem;
+
+    @include responsive(tab-portrait){ //width <700
+        margin-bottom: 20rem;
+    }
 
 
 
