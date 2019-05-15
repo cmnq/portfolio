@@ -1,46 +1,85 @@
 .navigation {
-    width: 100%;
-    font-size: 1.6rem;
-    @include responsive(phone){ //width <700
-        font-size: 1.3rem;
+    display: flex; 
+    justify-content: space-around;
+    min-height: 8vh;
+
+
+ &__burger {
+    display: none;
+    cursor: pointer;
+
+    &-line1,
+    &-line2,
+    &-line3{
+
+    width: 4.5rem;
+    height: .4rem;
+    background-color: $color-white;
+    margin: .9rem;
+    }
+    @include responsive(tab-portrait){ //width <700
+        display: block;
+    }
     }
 
 &__list{
     display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    position: relative;
+    justify-content: space-around;
+    width: 30%;
+    margin-right: 20rem;
+
+    @include responsive(tab-portrait){ //width <700
+        position: absolute;
+        height: 92vh;
+        top: 8vh;
+        justify-content: center;
+        background-color: $color-primary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+        z-index: 9999;
+        transform: translateX(100%);
+        transition: transform .5s ease-in;
+    }
     
 }
 
 &__item {
+    opacity: 0;
     margin-right: 2rem;
     padding: 0.9rem;
+    list-style: none;
+
+    @include responsive(tab-portrait){
+        opacity: 0;
+    }
 }
 &__link {
-    text-decoration: none;
-    text-transform: uppercase;
     color: $color-white;
-    @include responsive(phone){ //width <700
-        display: none;
-    }
+    text-decoration: none;
+    letter-spacing: .3rem;
+    font-weight: light;
+    font-size: 1.3rem;
 }
 
 &__logotype {
     margin-right: auto;
     margin-left: 0.9rem;
+    font-size: 2.1rem;
 
     @include responsive(tab-portrait){ //width <700
-        font-size: 1.7rem;
-    }
-    @include responsive(phone){ //width <700
-        position: absolute;
-        margin-top: 10rem;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        font-size: 2.7rem;
     }
 
  
 }
+}
+
+
+.nav-active {
+    @include responsive(tab-portrait){
+    transform: translateX(0);
+
+    }
 }
