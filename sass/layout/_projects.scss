@@ -1,97 +1,107 @@
 .section-projects {
-    background-image: linear-gradient(
-        to right bottom,
-        $color-primary-light,
-        $color-primary-dark);
+    background-image: linear-gradient(to right bottom,
+            $color-primary-light,
+            $color-primary-dark);
     background-size: cover;
     background-position: top;
     position: relative;
     height: fit-content;
     margin-top: -30rem;
--webkit-clip-path: polygon(0 0  , 100% 0, 100% 100%, 0 75vh);
-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
 
 
-@include responsive(tab-portrait){ //width <700
-    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
-    margin-top: -20rem;
-    padding: 10rem;
-}
-@include responsive(phone){ //width <700
-    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
-    margin-top: -10rem;
-    padding: 2rem;
-}
+    @include responsive(tab-portrait) {
+        //width <700
+        clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
+        margin-top: -20rem;
+        padding: 10rem;
+    }
+
+    @include responsive(phone) {
+        //width <700
+        clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
+        margin-top: -10rem;
+        padding: 2rem;
+    }
 
 
     &__cardcontainer {
-    display: flex;
-    flex-wrap:wrap;
-    margin: 10rem;
-    justify-content: space-around;
-};
-
-
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10rem;
+        justify-content: space-around;
+    };
 
     &__card {
-    width: 44rem;
-    background-color: #ebeef8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem 0;
-    box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
-    transition: .5s all;
-    border-radius: 3rem;
+        width: 44rem;
+        background-color: #ebeef8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem 0;
+        box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.2);
+        transition: .5s all;
+        border-radius: 3rem;
 
-    @include responsive(tab-portrait){ //width <700
-        width: 56rem;
-    };
-    };
+        @include responsive(tab-portrait) {
+            //width <700
+            width: 56rem;
+        }
+
+        ;
+    }
+
+    ;
+
     &__card-img {
-    width: 100%;
-    object-fit: cover;
-    height: 26rem;
-    border-radius: 2rem 2rem 0 0;
+        width: 100%;
+        object-fit: cover;
+        height: 26rem;
+        border-radius: 2rem 2rem 0 0;
 
-}
+    }
 
 
     &__card-heading {
-    font-size: 2.9rem;
-    color: $color-primary-dark;
-    margin: .4rem 0;
-    position: relative;
+        font-size: 2.9rem;
+        color: $color-primary-dark;
+        margin: .4rem 0;
+        position: relative;
 
-    &::after {
-        content: "";
-        position: absolute;
-        width: 25rem;
-        height: .1rem;
-        background-color: $color-primary-light;
-        bottom: -.4rem;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 2rem;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 25rem;
+            height: .1rem;
+            background-color: $color-primary-light;
+            bottom: -.4rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2rem;
+        }
     }
-}
 
     &__about {
-    font-size: 1.6rem;
-    margin-top: 1.1rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    text-align: center;
-    font-style: italic;
-    position: relative;
-
-    @include responsive(tab-portrait){ //width <700
+        font-size: 1.6rem;
+        margin-top: 1.1rem;
+        margin-bottom: 2rem;
         padding: 1rem;
-        text-align: justify;
-    };
-}
-    &__buttonbox{
+        text-align: center;
+        font-style: italic;
+        position: relative;
+
+        @include responsive(tab-portrait) {
+            //width <700
+            padding: 1rem;
+            text-align: justify;
+        }
+
+        ;
+    }
+
+    &__buttonbox {
         display: flex;
         margin: 4rem;
         width: inherit;
@@ -112,5 +122,3 @@ clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
     }
 
 }
-
-
