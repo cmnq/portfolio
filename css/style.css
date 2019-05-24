@@ -190,7 +190,7 @@ body {
     transform: translateX(-50%);
     border-radius: 2rem; }
 
-.bold-navy {
+.bold-primary {
   color: #255F85;
   font-weight: bold; }
 
@@ -357,7 +357,7 @@ body {
   .navigation__list {
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: 48%;
     margin-right: 10rem; }
     @media (max-width: 56.25em) {
       .navigation__list {
@@ -430,23 +430,22 @@ body {
     @media (max-width: 56.25em) {
       .section__about-photo {
         width: 100%; } }
-
-.photoxd {
-  width: 65%;
-  outline: .5rem solid white;
-  position: relative;
-  padding: 3rem; }
-  @media (max-width: 56.25em) {
-    .photoxd {
-      width: 80%;
-      outline: 0.3rem solid #fff;
-      padding: 1.5rem; } }
-  @media (max-width: 37.5em) {
-    .photoxd {
-      width: 40%;
-      padding: 1.5rem;
-      margin-bottom: .5rem;
-      outline: 0.3rem solid #fff; } }
+  .section__about-img {
+    width: 65%;
+    outline: .5rem solid white;
+    position: relative;
+    padding: 3rem; }
+    @media (max-width: 56.25em) {
+      .section__about-img {
+        width: 80%;
+        outline: 0.3rem solid #fff;
+        padding: 1.5rem; } }
+    @media (max-width: 37.5em) {
+      .section__about-img {
+        width: 40%;
+        padding: 1.5rem;
+        margin-bottom: .5rem;
+        outline: 0.3rem solid #fff; } }
 
 .section__myskills {
   padding: 10rem 0;

@@ -33,28 +33,28 @@
             width: 100%;
         }
     }
+    &-img {
+        width: 65%;
+        outline: .5rem solid white;
+        position: relative;
+        padding: 3rem;
+   
+        @include responsive(tab-portrait){ //width <700
+           width: 80%;
+           outline: .3rem solid $color-white;
+           padding: 1.5rem;
+       }
+        @include responsive(phone){ //width <700
+           width: 40%;
+           padding: 1.5rem;
+           margin-bottom: .5rem;
+           outline: .3rem solid $color-white;
+       }
+   
+   
+        }
+    
 
 
  }
 
- .photoxd {
-     width: 65%;
-     outline: .5rem solid white;
-     position: relative;
-     padding: 3rem;
-
-     @include responsive(tab-portrait){ //width <700
-        width: 80%;
-        outline: .3rem solid $color-white;
-        padding: 1.5rem;
-    }
-     @include responsive(phone){ //width <700
-        width: 40%;
-        padding: 1.5rem;
-        margin-bottom: .5rem;
-        outline: .3rem solid $color-white;
-    }
-
-
-     }
- 
