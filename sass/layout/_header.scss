@@ -1,10 +1,8 @@
-
 .header {
     height: 95vh;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)), 
+    background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)),
         url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
@@ -13,11 +11,14 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
 
 
-    @include responsive(tab-portrait){ //width <700
+    @include responsive(tab-portrait) {
+        //width <700
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
         height: 100vh;
-    } 
-    @include responsive(phone){ //width <600
+    }
+
+    @include responsive(phone) {
+        //width <600
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
     }
 
@@ -33,7 +34,8 @@
         text-align: center;
         align-items: center;
 
-        @include responsive(phone){ //width <700
+        @include responsive(phone) {
+            //width <700
             height: 70vh;
         }
     }

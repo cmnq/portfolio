@@ -8,9 +8,10 @@ body {
 
 
 .heading-primary {
-    color:$color-white;
+    color: $color-white;
     text-transform: uppercase;
-    backface-visibility: hidden; /* fix the animation shaking */
+    backface-visibility: hidden;
+    /* fix the animation shaking */
     margin-bottom: 6rem;
     position: relative;
     display: inline-block;
@@ -20,20 +21,20 @@ body {
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
-        
+
         animation-name: moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
 
-        @include responsive(phone){
-        letter-spacing: 1rem;
-        font-size: 5rem;
+        @include responsive(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
         }
-    
+
     }
-    
+
     &--sub {
-        display:block;
+        display: block;
         font-size: 2rem;
         font-weight: 700;
         letter-spacing: 1.5rem;
@@ -41,12 +42,12 @@ body {
         animation-duration: 1s;
         animation-timing-function: ease-out;
 
-        @include responsive(phone){
+        @include responsive(phone) {
             letter-spacing: .5rem;
         }
     }
 
-    &--project{
+    &--project {
         font-size: 5rem;
         color: $color-white;
         letter-spacing: 1.2rem;
@@ -74,18 +75,20 @@ body {
     -webkit-background-clip: text;
     color: transparent;
 
-    @include responsive(tab-portrait){
+    @include responsive(tab-portrait) {
         font-size: 3rem;
     }
 
-    @include responsive(phone){
+    @include responsive(phone) {
         font-size: 2.5rem;
     }
-};
+}
+
+;
 
 .heading-tertionary {
     font-size: 1.6rem;
-    font-weight:700;
+    font-weight: 700;
     text-transform: uppercase;
     color: $color-primary-dark;
 }
@@ -94,11 +97,11 @@ body {
     font-size: 1.5rem;
     color: $color-primary-light;
 
-    &:not(:last-child){
+    &:not(:last-child) {
         margin-bottom: 3rem;
     }
- 
-    
+
+
     &--project {
         color: $color-white;
         font-size: 1.6rem;
@@ -114,11 +117,13 @@ body {
     margin-bottom: 5rem;
     margin-top: 15rem;
     text-align: center;
-    color:white;
+    color: white;
     position: relative;
-    @include responsive(phone){ //width <700
-        margin-top: 2rem;
+
+    @include responsive(phone) {
+        //width <700
     }
+
     &::after {
         content: "";
         width: 10rem;
@@ -130,15 +135,21 @@ body {
         transform: translateX(-50%);
         border-radius: 2rem;
     }
-};
+}
+
+;
 
 .bold {
     &-primary {
-    color: $color-primary;
-    font-weight: bold;
-    
+        color: $color-primary;
+        font-weight: bold;
+
+    }
+
+    &-white {
+        font-weight: bold;
+        color: $color-white;
+    }
 }
-    &-white{ 
-    font-weight: bold;
-    color: $color-white;
-}};
+
+;

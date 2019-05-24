@@ -1,7 +1,7 @@
 {
-  "name": "WWwatch",
+  "name": "Hi, im Kamil",
   "version": "1.0.0",
-  "description": "Landing page for WWWatch",
+  "description": "My first portfolio",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
